@@ -2,10 +2,10 @@
 # Pro Finance
 
 ## Visão Geral
-Pro Finance é um aplicativo robusto de controle de finanças pessoais desenvolvido com React Native e Expo. Projetado para funcionar em ambos os sistemas operacionais, Android e iOS, este aplicativo ajuda os usuários a gerenciar suas despesas de forma manual, garantindo um controle preciso sobre suas finanças.
+Pro Finance é um aplicativo de controle de finanças pessoais desenvolvido com React Native e Expo. Projetado para funcionar em ambos os sistemas operacionais, Android e iOS, este aplicativo ajuda os usuários a gerenciar suas despesas de forma manual, garantindo um controle preciso sobre suas finanças.
 
 ## Motivação
-Desenvolvido para proporcionar uma experiência de usuário simplificada e eficiente, o Pro Finance permite aos usuários inserir, acompanhar e analisar suas despesas sem complicações, incentivando um melhor planejamento financeiro e tomada de decisão.
+Desenvolvido para proporcionar uma experiência de usuário simplificada, o Pro Finance permite aos usuários inserir, acompanhar e analisar suas despesas sem complicações, incentivando um melhor planejamento financeiro e tomada de decisão.
 
 ## Características Principais
 
