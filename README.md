@@ -39,6 +39,25 @@ Para rodar o Pro Finance em seu ambiente de desenvolvimento, siga os passos abai
    ```bash
    expo start
    ```
+4. **Artigo Ciêntifico do Projeto**
+
+[Clique aqui para acessar o documento](https://docs.google.com/document/d/1e70hDpn1Hwr_fs_A-rupBwyIlLtBYiby/edit#heading=h.3rylmof5o7qz)
+
+## Estrutura do Projeto
+
+O projeto ProFinance está organizado em uma estrutura modular, facilitando o desenvolvimento e a manutenção. Abaixo está a descrição básica da estrutura de diretórios:
+
+- **android**: Contém todos os arquivos e configurações específicas para a plataforma Android, incluindo códigos Java e XML para configurações e interfaces.
+- **ios**: Armazena os arquivos necessários para o desenvolvimento no iOS, como o código Objective-C, arquivos de configuração, e assets.
+- **imagesfinancepro**: Pasta que contém as imagens e logos utilizadas no projeto.
+- **src**: Inclui os arquivos TypeScript para as funcionalidades do app, organizados por telas e componentes.
+
+### Detalhes
+
+- **android/app/src**: Inclui código Java para atividades principais e configurações do aplicativo.
+- **ios/profinance**: Contém arquivos específicos do projeto iOS, como `AppDelegate` e assets de imagem para telas de carregamento.
+
+Esta organização ajuda a manter o projeto limpo e compreensível, permitindo que novos desenvolvedores entendam rapidamente a base de código e contribuam efetivamente.
 
 ## Configurações de Projeto
 - **Estrutura de Arquivos:** Baseada em componentes e páginas, facilitando a organização e a manutenção.
@@ -54,3 +73,8 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 ## Autores
 - **Hugo Santana Rosa** - *Desenvolvimento inicial*
 
+## Logos ProFinance
+
+![Brasão ProFinance](./imagesfinancepro/brasaoFinancePro.png)
+
+![Logo ProFinance](./imagesfinancepro/profinancelogo1.png)

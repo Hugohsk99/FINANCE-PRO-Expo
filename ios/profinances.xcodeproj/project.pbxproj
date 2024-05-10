@@ -14,6 +14,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-proFinance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-proFinance.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		CFFA02B709254B4388B53656 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD507945EAD24B3EBA444515 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-proFinance/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		DD507945EAD24B3EBA444515 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "profinance/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		4B81E40CAD9D44F49E0CE22C /* profinance-Bridging-Header.h */ = {isa = PBXFileReference; name = "profinance-Bridging-Header.h"; path = "profinance/profinance-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D228342A105541D2BA32CAA8 /* SplashScreen.storyboard */ = {isa = PBXFileReference; name = "SplashScreen.storyboard"; path = "profinance/SplashScreen.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,9 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				DD507945EAD24B3EBA444515 /* noop-file.swift */,
+				4B81E40CAD9D44F49E0CE22C /* profinance-Bridging-Header.h */,
+				D228342A105541D2BA32CAA8 /* SplashScreen.storyboard */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				1BA2CEAC775541FEB21BE5A2 /* profinance-Bridging-Header.h in Resources */,
+				E19A99C49C764216AECD77BA /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				CFFA02B709254B4388B53656 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,11 +323,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.proFinance;
-				PRODUCT_NAME = proFinance;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.proFinance";
+				PRODUCT_NAME = "proFinance";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = profinance/profinance-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = profinance/proFinance.entitlements;
 			};
 			name = Debug;
 		};
@@ -336,10 +349,13 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.proFinance;
-				PRODUCT_NAME = proFinance;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.proFinance";
+				PRODUCT_NAME = "proFinance";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = profinance/profinance-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = profinance/proFinance.entitlements;
 			};
 			name = Release;
 		};

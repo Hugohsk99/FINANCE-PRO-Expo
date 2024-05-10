@@ -6,9 +6,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "plugins": [
-      "expo-font"
-    ]
-  },
-  "name": "proFinance"
+    "android": {
+      "package": "com.anonymous.proFinance"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.proFinance"
+    }
+  }
 }
