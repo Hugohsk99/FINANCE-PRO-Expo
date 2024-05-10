@@ -49,7 +49,7 @@ export function Register() {
     });
 
     const { user } = useAuth();
-    const dataKey = `@gofinances:transactions_user:${user.id}`;
+    const dataKey = `@proFinance:transactions_user:${user.id}`;
 
     const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 

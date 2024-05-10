@@ -1,8 +1,7 @@
 {
   "expo": {
-    "name": "gofinances",
-    "slug": "gofinances",
-    "schema": "gofinances",
+    "name": "proFinance",
+    "slug": "proFinance",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -11,5 +10,5 @@
       "expo-font"
     ]
   },
-  "name": "gofinances"
+  "name": "proFinance"
 }

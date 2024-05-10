@@ -62,7 +62,7 @@ export function Dashboard() {
     }
 
     async function loadTransaction() {
-        const dataKey = `@gofinances:transactions_user:${user.id}`;
+        const dataKey = `@proFinance:transactions_user:${user.id}`;
 
         let entriesTotal = 0;
         let expensivesTotal = 0;
