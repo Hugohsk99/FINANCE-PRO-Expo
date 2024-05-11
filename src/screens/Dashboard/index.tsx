@@ -25,6 +25,9 @@ import {
 import { useTheme } from "styled-components/native";
 import { useAuth } from "../../hooks/auth";
 
+import BrasaoSvg from '../../assets/brasao.svg';
+import { RFValue } from "react-native-responsive-fontsize";
+
 export interface DataListProps extends TransactionCardProps {
     id: string;
 }
@@ -145,10 +148,18 @@ export function Dashboard() {
                 <Header>
                     <UserWrapper>
                         <UserInfo>
-                            <Photo source={{ uri: user.photo}}/>
+                            { user.photo ? (
+                                <Photo source={{ uri: user.photo}}/>
+                            ) : (
+                                <BrasaoSvg 
+                                    width={RFValue(80)}
+                                    height={RFValue(68)}
+                                    color={theme.colors.secondary}
+                                />
+                            )}                            
                             <User>
                                 <UserGreeting>Olá,</UserGreeting>
-                                <UserName>{user.name}</UserName>
+                                <UserName>{user.name ?? 'Usuário'}</UserName>
                             </User>
                         </UserInfo>
                         <LogoutButton onPress={signOut}>

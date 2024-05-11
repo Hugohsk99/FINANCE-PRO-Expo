@@ -7,7 +7,7 @@ export const Container = styled.View`
 
 export const Header = styled.View`
     width: 100%;
-    height: 70%;
+    height: 60%;
     background-color: ${({ theme }) => theme.colors.primary};
     justify-content: flex-end;
     align-items: center;
@@ -25,18 +25,19 @@ export const Title = styled.Text`
     margin-top: 45px;
 `;
 
-export const SignInTitle = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.regular};
-    color: ${({ theme }) => theme.colors.shape};
-    font-size: ${RFValue(16)}px;
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 67px;
+export const Form = styled.View`
+    flex: 1;
+    height: 30%;
+    width: 100%;
+    padding: 24px;
+    justify-content: space-between;
 `;
+
+export const Fields = styled.View``;
 
 export const Footer = styled.View`
     width: 100%;
-    height: 30%;
+    height: 10%;
     background-color: ${({ theme }) => theme.colors.secondary};
 `;
 

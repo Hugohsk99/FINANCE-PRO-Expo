@@ -18,28 +18,26 @@ Desenvolvido para proporcionar uma experiência de usuário simplificada, o Pro 
 - **React Native:** Framework para desenvolvimento de aplicativos nativos.
 - **Expo:** Plataforma de código aberto que permite desenvolvimento fácil e rápido.
 - **TypeScript:** Adiciona tipagem estática para aumentar a confiabilidade e manutenibilidade do código.
+- **styled-components**: Framework para estilização
+- **react-hook-form**: Melhor controle de formulários
+- **yup**: Melhor validação dos formularios
 
 ## Instalação
 
 Para rodar o Pro Finance em seu ambiente de desenvolvimento, siga os passos abaixo:
 
-1. **Instale o Node.js e o Expo CLI:**
-   ```bash
-   npm install -g expo-cli
-   ```
-
-2. **Clone o repositório e instale as dependências:**
+1. **Clone o repositório e instale as dependências:**
    ```bash
    git clone https://github.com/hugohsk99/proFinance.git
    cd proFinance
-   npm install
+   yarn
    ```
 
-3. **Inicie o servidor de desenvolvimento:**
+2. **Inicie o servidor de desenvolvimento:**
    ```bash
-   expo start
+   npx expo start
    ```
-4. **Artigo Ciêntifico do Projeto**
+3. **Artigo Ciêntifico do Projeto**
 
 [Clique aqui para acessar o documento](https://docs.google.com/document/d/1e70hDpn1Hwr_fs_A-rupBwyIlLtBYiby/edit#heading=h.3rylmof5o7qz)
 
@@ -49,7 +47,6 @@ O projeto ProFinance está organizado em uma estrutura modular, facilitando o de
 
 - **android**: Contém todos os arquivos e configurações específicas para a plataforma Android, incluindo códigos Java e XML para configurações e interfaces.
 - **ios**: Armazena os arquivos necessários para o desenvolvimento no iOS, como o código Objective-C, arquivos de configuração, e assets.
-- **imagesfinancepro**: Pasta que contém as imagens e logos utilizadas no projeto.
 - **src**: Inclui os arquivos TypeScript para as funcionalidades do app, organizados por telas e componentes.
 
 ### Detalhes
@@ -62,7 +59,8 @@ Esta organização ajuda a manter o projeto limpo e compreensível, permitindo q
 ## Configurações de Projeto
 - **Estrutura de Arquivos:** Baseada em componentes e páginas, facilitando a organização e a manutenção.
 - **Autenticação:** Implementada com autenticação via Google e Apple para segurança.
-- **Gerenciamento de Estado:** Utiliza Zustand para gerenciamento de estado dentro da aplicação.
+- **Gerenciamento de Estado:** Utiliza AsyncStorage para gerenciamento de estado dentro da aplicação.
+- **Estilos:** Utiliza styled-compenents para estilização.
 
 ## Como Contribuir
 Contribuições são bem-vindas! Por favor, leia nosso guia de contribuição para entender como fazer pull requests.

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { ActivityIndicator, Alert, Platform } from "react-native";
+import { ActivityIndicator, Alert } from "react-native";
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { RFValue } from "react-native-responsive-fontsize";
 import { useTheme } from "styled-components";
+import { useForm } from "react-hook-form";
 
-import AppleSvg from '../../assets/apple.svg';
 import GoogleSvg from '../../assets/google.svg';
 import LogoSvg from '../../assets/logo.svg';
 
@@ -16,40 +18,44 @@ import {
     Header,
     TitleWrapper,
     Title,
-    SignInTitle,
+    Form,
     Footer,
-    FooterWrapper
+    FooterWrapper,
+    Fields
 } from './styles';
+import { InputForm } from "../../components/Form/InputForm";
+import { Button } from "../../components/Form/Button";
 
+interface FormData {
+    [email: string]: any;
+}
+
+const schema = Yup.object().shape({
+    email: Yup.string().email().required('Informe o e-mail.'),
+    password: Yup.string().required('Informe a senha.')
+});
 
 export function SignIn() {
     const [isLoading, setIsLoading] = useState(false);
-    const { signInWithGoogle, signInWithApple } = useAuth();
+    const { signIn } = useAuth();
 
     const theme = useTheme();
 
-    async function handleSignInWithGoogle() {
+    const {
+        control,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({ resolver: yupResolver(schema) });
+
+    async function handleSignIn(form: FormData) {
         try {
             setIsLoading(true);
-            return await signInWithGoogle();
+            return await signIn(form.email, form.password);
         } catch (error) {
             setIsLoading(false);
             console.log(error);
             Alert.alert('Não foi possível conectar a conta Google.');
         }
-        
-    }
-
-    async function handleSignInWithApple() {
-        try {
-            setIsLoading(true);
-            return await signInWithApple();
-        } catch (error) {
-            setIsLoading(false);
-            console.log(error);
-            Alert.alert('Não foi possível conectar a conta Apple.');
-        }
-
     }
 
     return (
@@ -66,27 +72,36 @@ export function SignIn() {
                         muito simples
                     </Title>
                 </TitleWrapper>
-                <SignInTitle>
-                    Faça seu login com {'\n'}
-                    uma das contas abaixo
-                </SignInTitle>
             </Header>
+            <Form>
+                <Fields>
+                    <InputForm
+                        name="email"
+                        control={control}
+                        placeholder="e-Mail"
+                        autoCorrect={false}
+                        error={errors.email && errors.email.message}
+                    />
+                    <InputForm
+                        name="password"
+                        control={control}
+                        placeholder="Senha"
+                        autoCorrect={false}
+                        secureTextEntry={true}
+                        error={errors.password && errors.password.message}
+                    />
+                </Fields>
+                
+            </Form>
             <Footer>
-                <FooterWrapper>
+                <Button title="Entrar" onPress={handleSubmit(handleSignIn)}/>
+                {/* <FooterWrapper>
                     <SignInSocialButton 
                         title="Entrar com o Google"
                         svg={GoogleSvg}
-                        onPress={handleSignInWithGoogle}
+                        onPress={() => {}}
                     />
-                    {
-                        Platform.OS === 'ios' &&
-                        <SignInSocialButton 
-                            title="Entrar com o Apple"
-                            svg={AppleSvg}
-                            onPress={handleSignInWithApple}
-                        />
-                    }
-                </FooterWrapper>
+                </FooterWrapper> */}
 
                 { isLoading && <ActivityIndicator color={theme.colors.shape} style={{ marginTop: 18 }} />}
             </Footer>
